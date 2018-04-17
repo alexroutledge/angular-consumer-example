@@ -10,12 +10,12 @@ export class AppComponent {
   loadingInfo = '';
 
   async loadWebComponentsModule() {
-    const rootUrl = 'https://angular-elements-sample.now.sh';
+    const rootUrl = 'http://localhost:4201';
 
     await this.loadScript(`${rootUrl}/inline.bundle.js`);
     await this.loadScript(`${rootUrl}/vendor.bundle.js`);
     await this.loadScript(`${rootUrl}/main.bundle.js`);
-    // await this.loadScript(`${rootUrl}/styles.bundle.css`);
+    await this.loadScript(`${rootUrl}/styles.bundle.js`);
   }
 
   private async loadScript(url) {
